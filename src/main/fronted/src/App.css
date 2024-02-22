@@ -1,0 +1,9 @@
+.App {
+  padding: 20px;
+    background-color: #081F5C;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'jua';
+}
