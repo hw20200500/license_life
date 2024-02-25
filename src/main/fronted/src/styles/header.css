@@ -6,7 +6,32 @@
 
 
 }
-
+header {
+    position:relative;
+}
 .button {
     color: white;
+    justify-content: right;
+    border-radius: 30px;
+    border: 1px solid white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
+/* .drop_down:hover ~ .menu { 
+    display: flex;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    
+ } */
+
+.menu {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 20px;
+} 

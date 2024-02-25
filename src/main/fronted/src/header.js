@@ -1,24 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./styles/header.css";
 import {Link} from 'react-router-dom';
 
 
-const header = () => {
+const Header = (elem, initialState) => {
+  const [showDetailMenu, setShowDetailMenu] = useState(false);
+  const [showli, setShowli] = useState(false);
+  const handleMouseEnter = () => {
+    setShowDetailMenu(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowDetailMenu(false);
+  };
+
+  const handleMouseEnter_li = () => {
+    setShowli(true);
+  };
+
+  const handleMouseLeave_li = () => {
+    setShowli(false);
+  };
   return (
-    <div>
-      <a href='/'>
+    <header>
+        <a href='/'>
         <img id="logo" src={process.env.PUBLIC_URL +'svg/logo.svg'}/>
       </a>
 
-      <a  class="button" href='/college'>
-        <p>단과대 / 학과 정보 보러 가기</p>
-      </a>
-        
-      
-      
-    </div>
+      <label  class="button drop_down" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        단과대 / 학과 정보 보러 가기
+      </label>
+      {showDetailMenu && (
+      <div class='menu' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <ul class='college'onMouseEnter={handleMouseEnter_li} onMouseLeave={handleMouseLeave_li}>문과대학
+          {showli && (<li class='department'><a href='/college'>문헌정보학과</a></li>)}
+        </ul>
+        <ul class='college'onMouseEnter={handleMouseEnter_li} onMouseLeave={handleMouseLeave_li}>문과대학
+        {showli && (<li class='department'><a href='/college'>문헌정보학과</a></li>)}
+        </ul>
+      </div>)}
+    </header>
+    
     
   );
 };
 
-export default header;
+export default Header;
