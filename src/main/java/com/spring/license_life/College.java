@@ -2,6 +2,9 @@ package com.spring.license_life;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -10,11 +13,13 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "college")
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class College {
 	@Id
-    private String college_id;
-    
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "college_id")
+    private String collegeId;
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private String college_name; // username 속성 추가
     private String college_intro1;
     private String college_intro2;
@@ -28,8 +33,8 @@ public class College {
     
     
  // Getter 메서드
-    public String getcollege_id() {
-        return college_id;
+    public String getcollegeId() {
+        return collegeId;
     }
 
  // Getter 메서드
