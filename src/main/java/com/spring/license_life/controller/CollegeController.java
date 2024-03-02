@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.license_life.College;
@@ -19,7 +20,7 @@ public class CollegeController {
 	
 	@GetMapping("/api/college_name")
     public List college_name() {
-        return collegeRepository.findAllcollege_name();
+        return collegeRepository.findAllcollegeName();
     }
 	
 	@GetMapping("/api/college_department")
@@ -27,6 +28,9 @@ public class CollegeController {
         return collegeRepository.findAllcollegeId();
     }
 	
-	
+	@GetMapping("/api/college")
+	public List college_data(@RequestParam("collegeName")String collegeName) {
+		return collegeRepository.findBycollegeName(collegeName);
+	}
 	
 }

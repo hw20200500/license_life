@@ -1,0 +1,71 @@
+#college_title {
+    margin-top: 100px;
+    font-size: 60px;
+    text-align: left;
+    color: #FFEACB;
+}
+.department_layout {
+    position: relative; /* 부모 요소 설정 */
+    
+}
+
+.department_icon {
+    width: 100px;
+    height: 100px;
+}
+#introduce {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#detailed {
+    margin-bottom: 300px;
+}
+
+.layout {
+    padding-top: 130px;
+    padding-bottom: 250px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.round_layout {
+    position: relative;
+    z-index: 1;
+    border-radius: 15px;
+    border: 1px solid white;
+    padding: 50px;
+    text-align: center;
+}
+.department_icon {
+    position: relative;
+    width: 115%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.circle {
+    display: flex;
+    position: relative;
+    border-radius: 100%;
+    margin-bottom: -20%;
+    justify-content: center;
+    left: 50%;
+  transform: translateX(-50%);
+    background-color: white;
+    z-index: 2;
+    width: 170px;
+    height:170px;
+}
+
+.round_layout > h6 {
+    font-size: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 컬럼, 각각의 너비는 1fr */
+    grid-column-gap: 30px;
+    grid-row-gap: 80px;
+    width: 100%; /* 그리드의 전체 너비는 100% */
+}

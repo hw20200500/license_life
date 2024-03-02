@@ -18,16 +18,16 @@ public class College {
 	@Id
 	@Column(name = "college_id")
     private String collegeId;
-	
+	private String collegeName; // username 속성 추가
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String college_name; // username 속성 추가
+    
     private String college_intro1;
     private String college_intro2;
 
     // getters and setters
  // Getter 메서드
     public String getcollege_name() {
-        return college_name;
+        return collegeName;
     }
 
     
