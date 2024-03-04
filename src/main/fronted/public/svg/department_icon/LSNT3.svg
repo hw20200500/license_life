@@ -1,0 +1,43 @@
+<svg width="175" height="213" viewBox="0 0 175 213" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_21_329" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="110" width="159" height="103">
+<path d="M0 160.137C0 132.523 22.3858 110.137 50 110.137H109C136.614 110.137 159 132.522 159 160.137V212.569H0V160.137Z" fill="#DDDDDD"/>
+</mask>
+<g mask="url(#mask0_21_329)">
+<path d="M0 160.137C0 132.523 22.3858 110.137 50 110.137H109C136.614 110.137 159 132.522 159 160.137V212.569H0V160.137Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M105.379 110.137L79.5 145L53.6207 110.137H50C22.3858 110.137 0 132.523 0 160.137V212.569H159V160.137C159 132.522 136.614 110.137 109 110.137H105.379Z" fill="#649DF6"/>
+<line y1="154.5" x2="159" y2="154.5" stroke="white" stroke-width="3"/>
+<path d="M106.656 108L72.6558 155" stroke="white" stroke-width="3"/>
+</g>
+<path d="M21.5 156.5H57.5V182C57.5 186.694 53.6944 190.5 49 190.5H30C25.3056 190.5 21.5 186.694 21.5 182V156.5Z" fill="#649DF6" stroke="white" stroke-width="3"/>
+<mask id="mask1_21_329" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="29" y="0" width="102" height="102">
+<circle cx="80" cy="51" r="51" fill="#649DF6"/>
+</mask>
+<g mask="url(#mask1_21_329)">
+<circle cx="80" cy="51" r="51" fill="#649DF6"/>
+<path d="M41 58.2846C72.5799 55.0986 89.5565 55.3816 119 58.2846V86C88.7931 97.7058 71.741 98.3642 41 86V58.2846Z" fill="white"/>
+<line x1="42.2558" y1="60.3024" x2="28.2558" y2="52.3024" stroke="white" stroke-width="3"/>
+<line y1="-1.5" x2="16.1245" y2="-1.5" transform="matrix(0.868243 -0.496139 -0.496139 -0.868243 117 59)" stroke="white" stroke-width="3"/>
+</g>
+<rect x="144.449" y="109.945" width="24.0276" height="67.7141" transform="rotate(10.6192 144.449 109.945)" fill="white"/>
+<rect x="144.449" y="109.945" width="24.0276" height="3.27649" transform="rotate(10.6192 144.449 109.945)" fill="#D0E3FF"/>
+<rect x="142.839" y="136.312" width="17.4746" height="38.2257" transform="rotate(10.6192 142.839 136.312)" fill="#FFE296"/>
+<rect x="159.411" y="89.415" width="2.18433" height="21.8433" rx="1.09216" transform="rotate(10.6192 159.411 89.415)" fill="#C6C6C6"/>
+<rect x="136.265" y="177.305" width="15.2903" height="20.7511" transform="rotate(10.6192 136.265 177.305)" fill="white"/>
+<rect x="135.46" y="181.599" width="15.2903" height="3.27649" transform="rotate(10.6192 135.46 181.599)" fill="#D0E3FF"/>
+<rect width="28.3962" height="4.36865" rx="2.18433" transform="matrix(0.982874 0.18428 0.18428 -0.982874 129.02 180.391)" fill="white"/>
+<rect width="22.9354" height="4.36865" rx="2.18433" transform="matrix(0.982874 0.18428 0.18428 -0.982874 128.147 196.895)" fill="white"/>
+<rect width="28.3962" height="4.36865" rx="2.18433" transform="matrix(0.982874 0.18428 0.18428 -0.982874 142.302 109.542)" fill="white"/>
+<rect x="153.641" y="126.114" width="8.7373" height="1.09216" rx="0.546081" transform="rotate(10.6192 153.641 126.114)" fill="#7096D1"/>
+<rect x="149.616" y="147.583" width="8.7373" height="1.09216" rx="0.546081" transform="rotate(10.6192 149.616 147.583)" fill="#7096D1"/>
+<rect x="154.983" y="130.81" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 154.983 130.81)" fill="#7096D1"/>
+<rect x="154.178" y="135.104" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 154.178 135.104)" fill="#7096D1"/>
+<rect x="153.373" y="139.398" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 153.373 139.398)" fill="#7096D1"/>
+<rect x="152.568" y="143.692" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 152.568 143.692)" fill="#7096D1"/>
+<rect x="145.59" y="169.052" width="8.7373" height="1.09216" rx="0.546081" transform="rotate(10.6192 145.59 169.052)" fill="#7096D1"/>
+<rect x="150.958" y="152.28" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 150.958 152.28)" fill="#7096D1"/>
+<rect x="150.153" y="156.573" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 150.153 156.573)" fill="#7096D1"/>
+<rect x="149.348" y="160.867" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 149.348 160.867)" fill="#7096D1"/>
+<rect x="148.543" y="165.161" width="6.55298" height="1.09216" rx="0.546081" transform="rotate(10.6192 148.543 165.161)" fill="#7096D1"/>
+<rect x="36.5" y="163" width="6" height="19" rx="2" fill="white"/>
+<rect x="30" y="175.5" width="6" height="19" rx="2" transform="rotate(-90 30 175.5)" fill="white"/>
+</svg>

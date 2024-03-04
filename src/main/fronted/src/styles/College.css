@@ -69,3 +69,11 @@
     grid-row-gap: 80px;
     width: 100%; /* 그리드의 전체 너비는 100% */
 }
+
+.margin_top_15 {
+    margin-top: 15px;
+}
+
+.cursor {
+    cursor : pointer;
+}

@@ -1,0 +1,18 @@
+<svg width="181" height="192" viewBox="0 0 181 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M181 10H46V179H146L181 144V10Z" fill="#A8C6F3"/>
+<mask id="path-2-inside-1_13_842" fill="white">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M171 0H36V169H136L171 134V0Z"/>
+</mask>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M171 0H36V169H136L171 134V0Z" fill="white"/>
+<path d="M36 0V-5H31V0H36ZM171 0H176V-5H171V0ZM36 169H31V174H36V169ZM136 169V174H138.071L139.536 172.536L136 169ZM171 134L174.536 137.536L176 136.071V134H171ZM36 5H171V-5H36V5ZM41 169V0H31V169H41ZM136 164H36V174H136V164ZM167.464 130.465L132.465 165.464L139.536 172.536L174.536 137.536L167.464 130.465ZM166 0V134H176V0H166Z" fill="#D0E3FF" mask="url(#path-2-inside-1_13_842)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M167.688 131H134V164.688L167.688 131Z" fill="#D0E3FF"/>
+<path d="M56 29H92" stroke="#BABABA" stroke-width="5" stroke-linecap="round"/>
+<path d="M56 45H92" stroke="#BABABA" stroke-width="5" stroke-linecap="round"/>
+<path d="M56 62H92" stroke="#BABABA" stroke-width="5" stroke-linecap="round"/>
+<path d="M56 85H154" stroke="#BABABA" stroke-width="5" stroke-linecap="round"/>
+<path d="M56 101H154" stroke="#BABABA" stroke-width="5" stroke-linecap="round"/>
+<path d="M56 118H154" stroke="#BABABA" stroke-width="5" stroke-linecap="round"/>
+<rect x="104" y="24" width="49" height="42" fill="#FFD596"/>
+<circle cx="36" cy="120" r="23" fill="#7096D1"/>
+<path d="M0 181.5C0 161.894 15.8939 146 35.5 146C55.1061 146 71 161.894 71 181.5V192H0V181.5Z" fill="#7096D1"/>
+</svg>

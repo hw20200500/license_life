@@ -17,7 +17,7 @@ import jakarta.persistence.Table;
 public class Department {
 
 	@Id
-    private String departments_id;
+    private String departmentsId;
     
 	@ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "college_id")
@@ -44,8 +44,8 @@ public class Department {
     
     
  // Getter 메서드
-    public String getdepartments_id() {
-        return departments_id;
+    public String getdepartmentsId() {
+        return departmentsId;
     }
 
  // Getter 메서드
