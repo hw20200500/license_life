@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import College from './page/College';
 import Home from "./page/Home";
 import Department from "./page/Department";
+import License from "./page/License";
 import Header from "./Header";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home/>}/>
         <Route path="/college" element={<College/>}/>
         <Route path="/department" element={<Department/>}/>
+        <Route path="/license" element={<License/>}/>
         </Routes>
     </BrowserRouter>
     </div>

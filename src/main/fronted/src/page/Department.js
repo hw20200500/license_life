@@ -2,8 +2,9 @@ import React, { useEffect, useState }  from 'react';
 import "../styles/Department.css";
 import axios from 'axios';
 import Header from "../Header";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 const Department = () => {
+  const navigate = useNavigate();
   const [departments, setDepartments] = useState([]);
   const [licenses, setLicenses] = useState([]);
   const location = useLocation();
@@ -30,6 +31,9 @@ fetchData();
 return () => {};
 }, [departments]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
+const go_license = (name) => {
+  navigate("/license", { state: { licenseName: name } });
+};
   return (
     <div class='layout'>
       
@@ -48,7 +52,7 @@ return () => {};
       <h4>관련 자격증</h4>
       <div class='grid'>
       {licenses.map((license, idx) => (
-      <div class="d_round_layout">
+      <div class="d_round_layout" onClick={() => go_license(license)}>
             <h6 id='license_name' class='cursor' >{license}</h6>
             <li id='license_name'>자격증 정보</li>
           </div>

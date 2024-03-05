@@ -14,4 +14,5 @@ public interface LicenseRepository extends JpaRepository<License, String> {
     List<String> findAllName(); 
     
     List<License> findNameById(String id);
+    List<License> findByName(String name);
 }

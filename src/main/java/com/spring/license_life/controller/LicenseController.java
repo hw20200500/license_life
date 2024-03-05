@@ -32,13 +32,10 @@ public class LicenseController {
     public List license() {
         return licenseRepository.findAllName();
     }
-	@GetMapping("/api/license_detail")
-	public Optional<LicenseDetail> license_detail(@RequestParam(value="id")String licenseId, @RequestParam(value="class")String test_class) {
-		return licenseDetailRepository.findBylicenseIdAndTestClass(licenseId, test_class);
-	}
 	
-	@GetMapping("/api/license_detail2")
-	public List<LicenseDetail> license_detail2(@RequestParam(value="id")String licenseId) {
+	@GetMapping("/api/license_detail")
+	public List<LicenseDetail> license_detail2(@RequestParam(value="name")String licenseName) {
+		String licenseId = licenseRepository.findByName(licenseName).get(0).getId();
 		return licenseDetailRepository.findBylicenseId(licenseId);
 	}
 	

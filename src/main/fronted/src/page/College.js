@@ -5,9 +5,7 @@ import Header from "../Header";
 import { useLocation, useNavigate } from 'react-router-dom';
 const College = () => {
   const navigate = useNavigate();
-  const [colleges, setColleges] = useState([]);
-  const [departments, setDepartments] = useState([]);
-  const [departmentIds, setDepartmentIds] = useState([]);
+  const [licenses, setLicenses] = useState([]);
   const location = useLocation();
   const collegeName = location.state.collegeName;
   useEffect(() => {
