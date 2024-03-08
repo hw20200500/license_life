@@ -6,7 +6,7 @@ import {Link, useLocation} from 'react-router-dom';
 const License = () => {
     const [licenses, setLicenses] = useState([]);
     const location = useLocation();
-  const licenseName = location.state.licenseName;
+  const licenseName = location.state.name;
 
   useEffect(() => {
     const fetchData = async () => {

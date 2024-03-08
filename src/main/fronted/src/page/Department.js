@@ -8,7 +8,7 @@ const Department = () => {
   const [departments, setDepartments] = useState([]);
   const [licenses, setLicenses] = useState([]);
   const location = useLocation();
-  const departmentName = location.state.departmentName;
+  const departmentName = location.state.name;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -32,7 +32,7 @@ return () => {};
 }, [departments]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
 const go_license = (name) => {
-  navigate("/license", { state: { licenseName: name } });
+  navigate("/license", { state: { name: name } });
 };
   return (
     <div class='layout'>

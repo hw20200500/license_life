@@ -9,6 +9,17 @@
 header {
     position:relative;
 }
+
+#menu_button {
+    color: white;
+    border-radius: 30px;
+    border: 1px solid white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: right;
+}
 .button {
     color: white;
     justify-content: right;

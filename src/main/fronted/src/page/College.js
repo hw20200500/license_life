@@ -9,7 +9,7 @@ const College = () => {
   const [departments, setDepartments] = useState([]);
   const [departmentIds, setDepartmentIds] = useState([]);
   const location = useLocation();
-  const collegeName = location.state.collegeName;
+  const collegeName = location.state.name;
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,7 +29,7 @@ return () => {};
 }, [colleges]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
 const go_department = (name) => {
-  navigate("/department", { state: { departmentName: name } });
+  navigate("/department", { state: { name: name } });
 };
 
   return (
@@ -50,7 +50,6 @@ const go_department = (name) => {
           
           <div class="round_layout">
             <h6 id='department_name' class='cursor' onClick={() => go_department(department)}>{department}</h6>
-            <li id='license_name'>자격증 정보</li>
             <p  class="button margin_top_15 cursor" onClick={() => go_department(department)}>더보기</p>
           </div>
         </div>

@@ -8,11 +8,11 @@ import College from './page/College';
 const Header = (elem, initialState) => {
   const navigate = useNavigate();
   const go_college = (name) => {
-    navigate("/college", { state: { collegeName: name } });
+    navigate("/college", { state: { name: name } });
   };
 
   const go_department = (name) => {
-    navigate("/department", { state: { departmentName: name } });
+    navigate("/department", { state: { name: name } });
   };
 
   const [showDetailMenu, setShowDetailMenu] = useState(false);
@@ -55,7 +55,7 @@ const menu = {
         <img id="logo" src={process.env.PUBLIC_URL +'svg/logo.svg'}/>
       </a>
 
-      <label  class="button drop_down cursor" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <label  class="drop_down cursor" id='menu_button'onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
         단과대 / 학과 정보 보러 가기
       </label>
       

@@ -46,3 +46,16 @@
     background: none;
     margin-left: 20px;
 }
+
+.result_layout {
+    position: absolute;
+    width: 75%;
+    padding: 10px;
+    background-color: white;
+    color: black;
+}
+
+.result_layout >p {
+    font-size: 18px;
+    
+}
