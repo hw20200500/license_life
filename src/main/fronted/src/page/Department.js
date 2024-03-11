@@ -54,7 +54,6 @@ const go_license = (name) => {
       {licenses.map((license, idx) => (
       <div class="d_round_layout" onClick={() => go_license(license)}>
             <h6 id='license_name' class='cursor' >{license}</h6>
-            <li id='license_name'>자격증 정보</li>
           </div>
       ))}
       </div>

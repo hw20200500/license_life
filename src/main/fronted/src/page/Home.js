@@ -29,8 +29,11 @@ return () => {};
 }, [searchItems]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
 
+const result_layout = document.getElementById('result_layout');
+
 const searching  = event => {
   if (event.target.value.length!=0) {
+    result_layout.style.display = 'block';
     const searchItemsValues = Object.values(searchItems);
     const values = [...searchItemsValues[0], ...searchItemsValues[1], ...searchItemsValues[2]];
     // console.log(values);
@@ -39,6 +42,7 @@ const searching  = event => {
     console.log(results);
   } else {
     setsearch_results([]);
+    result_layout.style.display = 'none';
   }
   
 };
@@ -62,11 +66,11 @@ const go_link = (name) => {
           
           <input type='image' id='search_bttn' src={process.env.PUBLIC_URL +'svg/search_icon.svg'}/>
         </div>
-        <div class='result_layout'>
+        <div id='result_layout'>
             
           
         {search_results.map((result, idx) => (
-          <p onClick={() => go_link(result)}>{result}</p>
+          <p class="cursor" onClick={() => go_link(result)}>{result}</p>
           ))}
           </div>
         </div>

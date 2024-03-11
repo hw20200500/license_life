@@ -42,6 +42,7 @@ header {
 .menu {
     display: flex;
     position: absolute;
+    right: 0; /* 오른쪽에 붙이기 */
     background-color: white;
     color: black;
     padding: 10px;

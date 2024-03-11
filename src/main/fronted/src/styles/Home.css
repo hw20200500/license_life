@@ -47,7 +47,10 @@
     margin-left: 20px;
 }
 
-.result_layout {
+.result {
+    
+}
+#result_layout {
     position: absolute;
     width: 75%;
     padding: 10px;

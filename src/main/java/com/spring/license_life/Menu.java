@@ -18,4 +18,12 @@ public class Menu {
 		this.college = college;
 		this.departments = departments;
 	}
+	
+	public String getCollege() {
+        return college;
+    }
+	
+	public List<String> getDeoartnebts() {
+        return departments;
+    }
 }
