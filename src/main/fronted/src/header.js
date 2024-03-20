@@ -72,10 +72,11 @@ return () => {};
 
             <ul className='college' onMouseEnter={handleMouseEnter_li} onMouseLeave={handleMouseLeave_li} > 
             <p onClick={() => go_college(menuItem.college)} class='cursor'>{menuItem.college}</p>
-              
-            {menuItem.deoartnebts.map((department, n) => (
-              <li className='department cursor' onClick={() => go_department(department)}>{department}</li>
-            ))}
+            {showli && 
+  menuItem.deoartnebts.map((department, n) => (
+    <li key={n} className='department cursor' onClick={() => go_department(department)}>{department}</li>
+  ))
+}
             
             </ul>
             ))}

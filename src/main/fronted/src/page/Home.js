@@ -36,7 +36,7 @@ const searching  = event => {
     result_layout.style.display = 'block';
     const searchItemsValues = Object.values(searchItems);
     const values = [...searchItemsValues[0], ...searchItemsValues[1], ...searchItemsValues[2]];
-    // console.log(values);
+    console.log(values);
     const results = values.filter(item => item.includes(event.target.value))
     setsearch_results(results);
     console.log(results);
@@ -70,7 +70,10 @@ const go_link = (name) => {
             
           
         {search_results.map((result, idx) => (
-          <p class="cursor" onClick={() => go_link(result)}>{result}</p>
+          <div>
+            <p class="cursor" onClick={() => go_link(result)}>{result}</p>
+          </div>
+          
           ))}
           </div>
         </div>
