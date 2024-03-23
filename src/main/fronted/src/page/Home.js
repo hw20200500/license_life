@@ -10,7 +10,9 @@ const Home = () => {
 const [inputValue, setInput] = useState('');
 const [search_results, setsearch_results] = useState([]);
   const location = useLocation();
+
   useEffect(() => {
+    // 전체 검색어 목록(학과, 단과대, 자격증 이름) 데이터 가져와서 searchItems에 저장하기
     const fetchData = async () => {
       try {
         const response = await axios.get(`/api/search`);
@@ -31,10 +33,14 @@ return () => {};
 
 const result_layout = document.getElementById('result_layout');
 
+// 검색창에서 텍스트를 입력할 때마다(변경될 때마다) 실행되는 함수
+// 검색창에 입력된 텍스트가 포함된, 혹은 일치하는 searchItems 데이터를 출력한다. 
 const searching  = event => {
   if (event.target.value.length!=0) {
     result_layout.style.display = 'block';
     const searchItemsValues = Object.values(searchItems);
+
+    // [0]: 단과대학, [1]: 학과, [2]: 자격증 정보
     const values = [...searchItemsValues[0], ...searchItemsValues[1], ...searchItemsValues[2]];
     console.log(values);
     const results = values.filter(item => item.includes(event.target.value))
@@ -46,11 +52,17 @@ const searching  = event => {
   }
   
 };
+
+// searchItems은 해시맵 상태. key 값 : college, department, license / value : 단과대학, 학과, 자격증 명
+// searchItems의 key 값이 데이터를 분류하는 기준이면서, 해당 페이지로 가는 링크 주소명에 해당. 
+// 사용자가 검색 결과 리스트에서 선택한 텍스트가 어느 카테고리에 해당되는 것인지에 따라서 링크 주소가 달라짐.
+// 해당 페이지로 이동할 때, 클릭한 요소의 내용(명칭)도 같이 전달
 const go_link = (name) => {
   const result = Object.values(searchItems).findIndex(item => item.includes(name));
   console.log(Object.keys(searchItems)[result]);
   navigate(`/${Object.keys(searchItems)[result]}`, { state: { name: name } });
 };
+
   return (
     <div>
       <div class='main'>

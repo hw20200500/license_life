@@ -15,27 +15,36 @@ const Header = (elem, initialState) => {
     navigate("/department", { state: { name: name } });
   };
 
+  // '단과대/학과 정보 보기' 버튼에 마우스 올렸는가 아닌가를 저장하는 변수 : 만일 올렸으면 메뉴 보여주기
   const [showDetailMenu, setShowDetailMenu] = useState(false);
+  // 메뉴의 단과대 항목(ul)에 마우스 올렸는가 아닌가를 저장하는 변수 : 만일 올렸으면 학과 리스트 출력하기
   const [showli, setShowli] = useState(false);
+
+  // 메뉴 버튼에 마우스 올리면 메뉴 리스트 출력하는 함수
   const handleMouseEnter = () => {
     console.log(menuItems);
     setShowDetailMenu(true);
   };
 
+  // 메뉴 버튼에서 마우스 떨어뜨리면(마우스 오버되지 않으면) 출력된 메뉴 다시 안보이게 하는 함수
   const handleMouseLeave = () => {
     setShowDetailMenu(false);
   };
 
+  // 단과대 항목에 마우스 올리면 학과 리스트 출력하는 함수
   const handleMouseEnter_li = () => {
     setShowli(true);
   };
 
+  // 단과대 항목에서 마우스 떨어뜨리면(마우스 오버되지 않으면) 출력된 학과 리스트 다시 안보이게 하는 함수
   const handleMouseLeave_li = () => {
     setShowli(false);
   };
 
+  // 메뉴 데이터 저장하는 변수
   const [menuItems, setMenuItems] = useState([]);
-  const [departments, setDepartments] = useState([]);
+
+  // 백엔드에서 메뉴 데이터 가져와서 저장하기
   useEffect(() => {
     const fetchData = async () => {
       try {

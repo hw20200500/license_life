@@ -11,8 +11,10 @@ const License = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // 스프링의 LicenseController에 '자격증 이름'을 보내고 답변 받은 데이터를 저장한다.
         const response = await axios.get(`/api/license_detail?name=${encodeURIComponent(licenseName)}`);
 
+        // response안에 있는 데이터를 licenses에 저장한다.
         setLicenses(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -29,11 +31,13 @@ fetchData();
 return () => {};
 }, [licenses]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
-const quin=[];
-const subjects = [];
-const pass_standards = [];
-const exam_processes = [];
-const test_class = [];
+const quin=[]; // 응시 자격
+const subjects = []; //과목
+const pass_standards = []; //합격 기준
+const exam_processes = []; //시험 과정
+const test_class = []; // 필기 or 실기
+
+// 시험 유형이 1개인 경우에는 상관 없으나, 필기, 실기 등 여러 단계로 치는 자격증이 많기에 이를 단계별로 데이터 정리하는 코드
 for (let license of licenses) {
     quin.push(license["qualification"]);
     subjects.push(license["subject"]);
@@ -41,7 +45,7 @@ for (let license of licenses) {
     exam_processes.push(license["exam_process"]);
     test_class.push(license["test_class"]);
 }
-const sub = ["응시 기준", "시험 과목", "시험과정", "합격 기준"];
+
   return (
     <div class='layout'>
       <h1 id='college_title'>{licenseName}</h1>

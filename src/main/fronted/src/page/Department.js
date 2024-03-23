@@ -5,13 +5,21 @@ import Header from "../Header";
 import { useLocation, useNavigate } from 'react-router-dom';
 const Department = () => {
   const navigate = useNavigate();
+
+  // 학과 데이터 저장하는 변수
   const [departments, setDepartments] = useState([]);
+
+  // 자격증 데이터 저장하는 변수
   const [licenses, setLicenses] = useState([]);
+
   const location = useLocation();
+
+  // 이전 페이지(메뉴, 홈 페이지 검색창, 단과대 페이지 등)에서 받은 데이터(단과대학명)를 저장
   const departmentName = location.state.name;
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // 스프링의 departmentController에 '학과 이름'을 보내고 답변 받은 데이터를 저장한다.
         const response = await axios.get(`/api/department?departmentName=${encodeURIComponent(departmentName)}`);
 
         setDepartments(response.data[0][0]);
@@ -31,6 +39,7 @@ fetchData();
 return () => {};
 }, [departments]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
+// 자격증 페이지로 이동. 이동하면서 클릭한 자격증의 명칭도 name에 저장해서 같이 전달.
 const go_license = (name) => {
   navigate("/license", { state: { name: name } });
 };

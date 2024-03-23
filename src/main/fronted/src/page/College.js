@@ -5,14 +5,20 @@ import Header from "../Header";
 import { useLocation, useNavigate } from 'react-router-dom';
 const College = () => {
   const navigate = useNavigate();
+  // 단과대학 데이터 저장
   const [colleges, setColleges] = useState([]);
+  // 단과대학에 소속되어 있는 학과 데이터 저장
   const [departments, setDepartments] = useState([]);
+  // 소속 학과의 id 저장 : 학과 이미지(svg 파일) 파일명을 학과 id로 저장했음. 얘를 가지고 
   const [departmentIds, setDepartmentIds] = useState([]);
   const location = useLocation();
+
+  // 이전 페이지에서 학과명 데이터 받아온 뒤, 저장.
   const collegeName = location.state.name;
   useEffect(() => {
     const fetchData = async () => {
       try {
+        // 스프링의 collegeController에 '단과대학 이름'을 보내고 답변 받은 데이터를 저장한다.
         const response = await axios.get(`/api/college?collegeName=${encodeURIComponent(collegeName)}`);
         setColleges(response.data[0]);
         setDepartments(response.data[1]);
