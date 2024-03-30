@@ -12,7 +12,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "departments")
+@Table(name = "department")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Department {
 
