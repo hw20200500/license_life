@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import "../styles/Home.css";
 import axios from 'axios';
-import {Link, useLocation, useNavigate} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 
 
 const Home = () => {
   const navigate = useNavigate();
   const [searchItems, setsearchItems] = useState('');
-const [inputValue, setInput] = useState('');
 const [search_results, setsearch_results] = useState([]);
-  const location = useLocation();
 
   useEffect(() => {
     // 전체 검색어 목록(학과, 단과대, 자격증 이름) 데이터 가져와서 searchItems에 저장하기
@@ -66,7 +64,7 @@ const go_link = (name) => {
   return (
     <div>
       <div class='main'>
-        <img src={process.env.PUBLIC_URL +'svg/logo.svg'}/>
+        <img src={process.env.PUBLIC_URL +'svg/logo.svg'} alt=""/>
         <p>우리 학과에서 필요한 자격증은 뭘까?</p>
       </div>
 
@@ -76,7 +74,7 @@ const go_link = (name) => {
         <div id='search_bar'>
           <input type="text" id="search" name="search" required minlength="1" onChange={searching}/>
           
-          <input type='image' id='search_bttn' src={process.env.PUBLIC_URL +'svg/search_icon.svg'}/>
+          <input type='image' id='search_bttn' src={process.env.PUBLIC_URL +'svg/search_icon.svg'} alt=""/>
         </div>
         <div id='result_layout'>
             

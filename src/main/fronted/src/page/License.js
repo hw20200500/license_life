@@ -1,7 +1,7 @@
 import React, { useEffect, useState }  from 'react';
 import "../styles/License.css";
 import axios from 'axios';
-import {Link, useLocation} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 const License = () => {
     const [licenses, setLicenses] = useState([]);
@@ -29,7 +29,7 @@ fetchData();
 
 // cleanup 함수를 반환하여 언마운트 시에도 데이터를 불러오지 않도록 처리
 return () => {};
-}, [licenses]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
+}, [licenses, licenseName]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
 const quin=[]; // 응시 자격
 const subjects = []; //과목

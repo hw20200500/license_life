@@ -1,7 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import "../styles/Department.css";
 import axios from 'axios';
-import Header from "../Header";
 import { useLocation, useNavigate } from 'react-router-dom';
 const Department = () => {
   const navigate = useNavigate();
@@ -37,7 +36,7 @@ fetchData();
 
 // cleanup 함수를 반환하여 언마운트 시에도 데이터를 불러오지 않도록 처리
 return () => {};
-}, [departments]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
+}, [departments, departmentName]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
 // 자격증 페이지로 이동. 이동하면서 클릭한 자격증의 명칭도 name에 저장해서 같이 전달.
 const go_license = (name) => {
@@ -54,7 +53,7 @@ const go_license = (name) => {
           <p id='detailed'>{departments["departments_intro2"]}</p>
         </div>
         <div class="department_circle" >
-        <img class='department_icon' src={process.env.PUBLIC_URL +`svg/department_icon/${departments["departmentsId"]}.svg`} /></div>
+        <img class='department_icon' src={process.env.PUBLIC_URL +`svg/department_icon/${departments["departmentsId"]}.svg`} alt=""/></div>
       </div>
      
      <div>

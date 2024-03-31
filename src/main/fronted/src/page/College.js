@@ -32,7 +32,7 @@ fetchData();
 
 // cleanup 함수를 반환하여 언마운트 시에도 데이터를 불러오지 않도록 처리
 return () => {};
-}, [colleges]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
+}, [colleges, collegeName]); // 의존성 배열이 빈 배열이므로 컴포넌트가 처음 렌더링될 때만 실행됨
 
 const go_department = (name) => {
   navigate("/department", { state: { name: name } });
@@ -52,7 +52,7 @@ const go_department = (name) => {
       {departments.map((department, idx) => (
         <div class="department_layout">
           <div class="circle cursor" onClick={() => go_department(department)}>
-        <img class='department_icon' src={process.env.PUBLIC_URL +`svg/department_icon/${departmentIds[idx]}.svg`} /></div>
+        <img class='department_icon' src={process.env.PUBLIC_URL +`svg/department_icon/${departmentIds[idx]}.svg`} alt=""/></div>
           
           <div class="round_layout">
             <h6 id='department_name' class='cursor' onClick={() => go_department(department)}>{department}</h6>

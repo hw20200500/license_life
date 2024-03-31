@@ -18,10 +18,10 @@ function App() {
     <BrowserRouter>
       <Header/>
       <Routes>
-        <Route path="/" element={<Home/>}/>  /*홈 페이지 주소 */
-        <Route path="/college" element={<College/>}/> /*단과대학 페이지 주소*/
-        <Route path="/department" element={<Department/>}/> /*학과 페이지 주소 */
-        <Route path="/license" element={<License/>}/> /*자격증 페이지 주소 */
+        <Route path="/" element={<Home/>}/>  {/*홈 페이지 주소 */}
+        <Route path="/college" element={<College/>}/> {/*단과대학 페이지 주소*/}
+        <Route path="/department" element={<Department/>}/> {/*학과 페이지 주소 */}
+        <Route path="/license" element={<License/>}/> {/*자격증 페이지 주소 */}
         </Routes>
     </BrowserRouter>
     </div>

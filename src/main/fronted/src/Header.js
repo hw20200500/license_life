@@ -66,7 +66,7 @@ return () => {};
   return (
     <header>
         <a href='/'>
-        <img id="logo" src={process.env.PUBLIC_URL +'svg/logo.svg'}/>
+        <img id="logo" src={process.env.PUBLIC_URL +'svg/logo.svg'}  alt=""/>
       </a>
 
       <label  class="drop_down cursor" id='menu_button'onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
