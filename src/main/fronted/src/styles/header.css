@@ -47,4 +47,14 @@ header {
     color: black;
     padding: 6px;
     border-radius: 30px;
+    /* 초기 상태 */
+    transform: scale(0);
+    opacity: 0;
+    /* 변화를 부드럽게 만들기 위한 transition 설정 */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 } 
+.menu.show {
+    /* 확대되는 상태 */
+    transform: scale(1);
+    opacity: 1;
+}

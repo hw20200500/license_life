@@ -73,10 +73,7 @@ return () => {};
         단과대 / 학과 정보 보러 가기
       </label>
       
-      {showDetailMenu && (
-    
-        
-        <div className='menu' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <div className={`menu ${showDetailMenu ? 'show' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {menuItems.map((menuItem, idx) => (
 
             <ul className='college' onMouseEnter={handleMouseEnter_li} onMouseLeave={handleMouseLeave_li} > 
@@ -90,8 +87,6 @@ return () => {};
             </ul>
             ))}
         </div>
-    
-)}
     </header>
     
     
