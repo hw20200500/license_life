@@ -15,6 +15,10 @@ const Header = (elem, initialState) => {
     navigate("/department", { state: { name: name } });
   };
 
+  const go_board = () => {
+    navigate("/board");
+  };
+
   // '단과대/학과 정보 보기' 버튼에 마우스 올렸는가 아닌가를 저장하는 변수 : 만일 올렸으면 메뉴 보여주기
   const [showDetailMenu, setShowDetailMenu] = useState(false);
   // 메뉴의 단과대 항목(ul)에 마우스 올렸는가 아닌가를 저장하는 변수 : 만일 올렸으면 학과 리스트 출력하기
@@ -65,14 +69,20 @@ return () => {};
 
   return (
     <header>
-        <a href='/'>
-        <img id="logo" src={process.env.PUBLIC_URL +'svg/logo.svg'}  alt=""/>
-      </a>
+      <div id='header_items'>
+        <a id="logo" href='/'>
+          <img  src={process.env.PUBLIC_URL +'svg/logo.svg'}  alt=""/>
+        </a>
 
-      <label  class="drop_down cursor" id='menu_button'onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-        단과대 / 학과 정보 보러 가기
-      </label>
-      
+        <label  class="button cursor" id='menu_button'onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+          단과대 & 학과
+        </label>
+        <div class='menu_line'/>
+        <label class="button cursor" id='board_button' onClick={() => go_board()}>
+          게시판
+        </label>
+      </div>
+        
       <div className={`menu ${showDetailMenu ? 'show' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
           {menuItems.map((menuItem, idx) => (
 

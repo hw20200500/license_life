@@ -1,7 +1,6 @@
 import React, { useEffect, useState }  from 'react';
 import "../styles/College.css";
 import axios from 'axios';
-import Header from "../Header";
 import { useLocation, useNavigate } from 'react-router-dom';
 const College = () => {
   const navigate = useNavigate();
