@@ -23,6 +23,9 @@ public class Board {
     
     private String detailed;
     private Date date;
+    private String password;
+    private String writer;
+    private String confirm;
 
     
     // getters and setters
@@ -43,13 +46,37 @@ public class Board {
     	return date;
     }
     
+    public String getPassword() {
+    	return password;
+    }
+    
+    public String getWriter() {
+    	return writer;
+    }
+    
+    public String getConfirm() {
+    	return confirm;
+    }
+    
     // Setter 메서드
-    public int setid() {
-        return id;
+    public void setid(int id) {
+        this.id = id;
     }
     
     public void setTitle(String title) {
     	this.title = title;
+    }
+    
+    public void setPassword(String password) {
+    	this.password = password;
+    }
+    
+    public void setConfirm(String confirm) {
+    	this.confirm = confirm;
+    }
+    
+    public void setWriter(String writer) {
+    	this.writer = writer;
     }
     
     public void setdate(Date date) {

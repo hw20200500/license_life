@@ -2,8 +2,26 @@
     display: flex;
     flex-direction: column;
     
+    #bottom_layout {
+        margin-top: 5px;
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        p {
+            margin-right: 20px;
+            margin-left: 20px;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }
+
+    }
 }
 
+.description {
+    font-family:  "Gowun Batang", serif;
+    margin-left: auto;
+    margin-bottom: 5px;
+}
 #writing_title {
     font-size: 20px;
     padding: 7px;
@@ -22,6 +40,11 @@
     font-family:  "Gowun Batang", serif;
 }
 
+.writing {
+    font-family:  "Gowun Batang", serif;
+    padding: 5px;
+    border-radius: 10px;
+}
 #save {
     width: fit-content;
     padding: 5px;
@@ -30,7 +53,7 @@
     border: 1px solid white;
     color: white;
     font-family: 'jua';
-    margin-top: 20px;
+    margin-left: 40px;
     div {
         padding-top: 4px;
         padding-bottom: 4px;

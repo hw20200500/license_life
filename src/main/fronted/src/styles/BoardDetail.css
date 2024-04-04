@@ -1,0 +1,14 @@
+.board_data {
+    font-family:  "Gowun Batang", serif;
+    margin-left: 10px;
+    margin-right: 30px;
+
+}
+
+#confirm {
+    margin-left: auto;
+}
+.date_writer_layout {
+    display: flex;
+    align-items: center;
+}

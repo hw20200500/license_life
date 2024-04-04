@@ -1,7 +1,20 @@
 .board_list {
     display: grid;
-    grid-template-columns: 5% 80% 15%; /* 3개의 컬럼, 각각의 너비는 1fr */
+    grid-template-columns: 7% 58% 10% 10% 15%; /* 3개의 컬럼, 각각의 너비는 1fr */
     border-bottom: 1px solid white;
+    .center {
+        
+        text-align: center;
+    }
+    ul {
+        padding-inline-start: 0px;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+.table {
+    background-color: rgba(255, 255, 255, 0.236);
+    border-bottom: 2px solid white;
 }
 #write_button {
     border: 1px solid white;
@@ -15,4 +28,11 @@
     margin-top: 40px;
     border-top: 3px solid white;
     border-bottom: 2px solid white;
+}
+
+#board_detailed {
+    font-family:  "Gowun Batang", serif;
+    font-weight: 400;
+  font-style: normal;
+  line-height: 1.7;
 }

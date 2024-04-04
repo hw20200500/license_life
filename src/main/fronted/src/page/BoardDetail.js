@@ -1,5 +1,5 @@
 import React, { useEffect, useState }  from 'react';
-import "../styles/Board.css";
+import "../styles/BoardDetail.css";
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 const BoardDetail = () => {
@@ -12,7 +12,7 @@ const BoardDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // 스프링의 collegeController에 '단과대학 이름'을 보내고 답변 받은 데이터를 저장한다.
+        // 스프링의 boardController에 'id'을 보내고 답변 받은 데이터를 저장한다.
         const response = await axios.get(`/api/boardDetail?id=${id}`);
         setBoard(response.data);
       } catch (error) {
@@ -34,7 +34,12 @@ return () => {};
       
       <div>
             <h1 id='title'>{board['title']}</h1>
-        <p id='date'>{board['date']}</p>
+            <div className='date_writer_layout'>
+                 <p>작성일자</p><p className='board_data'>{board['date']}</p>
+                 <p>작성자</p><p className='board_data'>{board['writer']}</p>
+                 <p id='confirm'>관리자 확인</p><p className='board_data'>{board['confirm']}</p>
+
+            </div>
           <p>{board['detailed']}</p>
         </div>
     </div>

@@ -34,12 +34,14 @@ public class BoardController {
 	}
 	
 	@GetMapping("/api/createBoard")
-	public void createBoard(Model model, @RequestParam("title") String title, @RequestParam("date") Date date, @RequestParam("detailed") String detailed) {
+	public void createBoard(Model model, @RequestParam("title") String title, @RequestParam("date") Date date, @RequestParam("detailed") String detailed, @RequestParam("password") String password, @RequestParam("writer") String writer) {
 		
 		Board board = new Board();
         board.setTitle(title);
         board.setdate(date);
         board.setdetailed(detailed);
+        board.setWriter(writer);
+        board.setPassword(password);
 		
 		boardRepository.save(board);
 		
